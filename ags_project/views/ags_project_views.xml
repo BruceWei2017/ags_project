@@ -1,0 +1,760 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+
+
+
+	<!-- START of Project Activity Views -->
+
+	<record model="ir.ui.view" id="ags_project_time_activity_tree_view">
+		<field name="name">ags.project.time.activity.tree</field>
+		<field name="model">ags.project.time.activity</field>
+		<field name="arch" type="xml">
+			<tree string="Project Activities">
+				<field name="name" />
+				<field name="plan_start_date" />
+				<field name="plan_end_date" />
+			</tree>
+		</field>
+	</record>
+
+	<record model="ir.ui.view" id="ags_project_time_activity_form_view">
+		<field name="name">ags.project.time.activity.form</field>
+		<field name="model">ags.project.time.activity</field>
+		<field name="arch" type="xml">
+			<form string="Project Activity">
+				<sheet>
+					<group>
+						<group>
+							<field name="name" />
+							<field name="estimate_cost" />
+						</group>
+						<group>
+							<field name="phase_id" />
+							<field name="project_id"  context="{'default_project_id': default_project_id}" />
+						</group>
+						<group>
+							<field name="plan_start_date" />
+							<field name="plan_end_date" />
+						</group>
+						<group>
+							<field name="actual_start_date" />
+							<field name="actual_end_date" />
+						</group>
+					</group>
+					<group>
+						<field name="actual_cost" />
+						<field name="description" />
+						<field name="activity_tasks">
+							<tree string="Activity Tasks" create="false">
+								<field name="name" />
+								<field name="assign_id" />
+								<field name="plan_start_date" />
+								<field name="plan_end_date" />
+								<field name="deliverables" />
+							</tree>
+						</field>
+					</group>
+				</sheet>
+			</form>
+		</field>
+	</record>
+
+
+	<!-- END of Project Activity Views -->
+
+
+
+
+	<!-- START of Project Milestone Views -->
+
+	<record model="ir.ui.view" id="ags_project_time_phase_form_view">
+		<field name="name">ags.project.time.milestone.form</field>
+		<field name="model">ags.project.time.milestone</field>
+		<field name="arch" type="xml">
+			<form string="Project Milestone">
+				<sheet>
+					<group>
+						<group>
+							<field name="name" />
+							<field name="type" />
+							<field name="project_id" />
+						</group>
+						<group>
+							<field name="plan_end_date" />
+							<field name="actual_end_date" />
+							<field name="deliverables" />
+						</group>
+					</group>
+				</sheet>
+			</form>
+		</field>
+	</record>
+
+
+	<!-- END of Project Milestone Views -->
+
+
+
+	<!-- START of Project Phase Views -->
+
+	<!-- for Project View -->
+	<record model="ir.ui.view" id="ags_project_time_phase_form_view">
+		<field name="name">ags.project.time.phase.form</field>
+		<field name="model">ags.project.time.phase</field>
+		<field name="arch" type="xml">
+			<form string="Project Phase">
+				<sheet>
+					<group>
+						<group>
+							<field name="name" />
+							<field name="state" />
+							<field name="project_id" />
+						</group>
+						<group>
+							<field name="plan_start_date" />
+							<field name="plan_end_date" />
+						</group>
+					</group>
+				</sheet>
+			</form>
+		</field>
+	</record>
+
+	<!-- END of Project Phase Views -->
+
+
+	<!-- START of Project Activity Views -->
+
+	<record model="ir.ui.view" id="ags_project_time_activity_kanban_view">
+		<field name="name">ags.project.time.activity.kanban</field>
+		<field name="model">ags.project.time.activity</field>
+		<field name="arch" type="xml">
+			<kanban default_group_by="phase_id" quick_create="false">
+				<field name="color" />
+				<templates>
+					<t t-name="kanban-box">
+						<div
+							t-attf-class="oe_kanban_color_{{kanban_getcolor(record.color.raw_value)}}
+                                                  oe_kanban_global_click_edit oe_semantic_html_override
+                                                  oe_kanban_card {{record.group_fancy==1 ? 'oe_kanban_card_fancy' : ''}}">
+							<div class="oe_dropdown_kanban">
+								<!-- dropdown menu -->
+								<div class="oe_dropdown_toggle">
+									<i class="fa fa-bars fa-lg" />
+									<ul class="oe_dropdown_menu">
+										<li>
+											<a type="delete">Delete</a>
+										</li>
+										<li>
+											<ul class="oe_kanban_colorpicker" data-field="color" />
+										</li>
+									</ul>
+								</div>
+								<div class="oe_clear"></div>
+							</div>
+							<div t-attf-class="oe_kanban_content">
+								<!-- title -->
+								Activity Name:
+								<field name="name" />
+								<br />
+								Plan Start date:
+								<field name="plan_start_date" />
+								<br />
+								Plan End Date:
+								<field name="plan_end_date" />
+							</div>
+						</div>
+					</t>
+				</templates>
+			</kanban>
+		</field>
+	</record>
+
+	<record model="ir.actions.act_window" id="ags_project_time_activity_list_action">
+		<field name="name">Activity</field>
+		<field name="res_model">ags.project.time.activity</field>
+		<field name="view_type">form</field>
+		<field name="view_mode">kanban,tree,form</field>
+		<field name="domain">[('project_id', '=', [active_id])]</field>
+		<field name="context">{'group_by':'phase_id', 'default_project_id':active_id}</field>
+		<field name="help" type="html">
+			<p class="oe_view_nocontent_create">Create the first Activity.
+			</p>
+		</field>
+	</record>
+
+
+
+
+	<!-- END of Project Activity Views -->
+
+
+
+	<!-- START of Project Task Views -->
+
+
+	<!-- START of Project Task Form Views -->
+
+	<record model="ir.ui.view" id="ags_project_cost_task_form_view">
+		<field name="name">ags.project.cost.task.form</field>
+		<field name="model">ags.project.cost.task</field>
+		<field name="arch" type="xml">
+			<form string="Project Task">
+				<sheet>
+					<group>
+						<group>
+							<field name="name" />
+							<field name="project_id" context="{'default_project_id': default_project_id}" />
+							<field name="activity_id" />
+						</group>
+						<group>
+							<field name="priority" widget="priority" />
+							<field name="state" />
+							<field name="assign_id" />
+						</group>
+						<group>
+							<field name="plan_start_date" />
+							<field name="plan_end_date" />
+						</group>
+						<group>
+							<field name="actual_start_date" />
+							<field name="actual_end_date" />
+						</group>
+					</group>
+					<group>
+						<field name="report_frequency" string="Report Frequency" />
+						<field name="percent_complete" readonly="1" widget="progressbar" />
+						<field name="actual_cost" />
+						<field name="deliverables" />
+						<field name="description" />
+						<field name="scope_id" />
+					</group>
+				</sheet>
+			</form>
+		</field>
+	</record>
+
+
+	<!-- END of Project Task Form Views -->
+
+
+
+	<record model="ir.ui.view" id="ags_project_cost_task_tree_view">
+		<field name="name">ags.project.cost.task.tree</field>
+		<field name="model">ags.project.cost.task</field>
+		<field name="arch" type="xml">
+			<tree string="Project Tasks">
+				<field name="name" />
+				<field name="activity_id" />
+				<field name="state" />
+				<field name="assign_id" />
+				<field name="plan_start_date" />
+				<field name="plan_end_date" />
+				<field name="percent_complete" string="Task % Complete"
+					widget="progressbar" />
+				<field name="description" />
+			</tree>
+		</field>
+	</record>
+
+
+	<record model="ir.actions.act_window" id="ags_project_cost_task_list_action">
+		<field name="name">Task</field>
+		<field name="res_model">ags.project.cost.task</field>
+		<field name="view_type">form</field>
+		<field name="view_mode">tree,form</field>
+		<field name="domain">[('project_id', '=', [active_id])]</field>
+		<field name="context">{'default_project_id':active_id}</field>
+		<field name="help" type="html">
+			<p class="oe_view_nocontent_create">Create the first Task.
+			</p>
+		</field>
+	</record>
+
+
+	<record model="ir.actions.act_window" id="ags_project_cost_my_task_list_action">
+		<field name="name">Task</field>
+		<field name="res_model">ags.project.cost.task</field>
+		<field name="view_type">form</field>
+		<field name="view_mode">tree,form</field>
+		<field name="domain">[('assign_id', '=', [uid])]</field>
+		<field name="help" type="html">
+			<p class="oe_view_nocontent_create">Create the first Task.
+			</p>
+		</field>
+	</record>
+
+
+	<!-- END of Project Task Views -->
+
+
+	<!-- START of Project Communication: Project Report Views -->
+
+	<record model="ir.actions.act_window" id="ags_project_communication_report_list_action">
+		<field name="name">Project Report</field>
+		<field name="res_model">ags.project.communication.report</field>
+		<field name="view_type">form</field>
+		<field name="view_mode">tree,form</field>
+		<field name="help" type="html">
+			<p class="oe_view_nocontent_create">Create the first Report.
+			</p>
+		</field>
+	</record>
+
+
+
+	<record model="ir.ui.view" id="ags_project_communication_report_form_view">
+		<field name="name">ags.project.communication.report.form</field>
+		<field name="model">ags.project.communication.report</field>
+		<field name="arch" type="xml">
+			<form string="Project Report">
+				<sheet>
+					<div class="oe_title">
+						<label for="name" class="oe_edit_only" />
+						<h1>
+							<field name="name" />
+						</h1>
+					</div>
+					<group>
+						<group>
+							<field name="project_id" />
+							<field name="type" />
+						</group>
+						<group>
+							<field name="percent_completion" />
+							<field name="create_uid" string="Created by" />
+						</group>
+						<group>
+							<field name="report_start_date" />
+						</group>
+						<group>
+							<field name="report_end_date" />
+						</group>
+					</group>
+					<group>
+						<field name="description" />
+					</group>
+				</sheet>
+			</form>
+		</field>
+	</record>
+
+
+	<record model="ir.ui.view" id="ags_project_communication_report_tree_view">
+		<field name="name">ags.project.communication.report.tree</field>
+		<field name="model">ags.project.communication.report</field>
+		<field name="arch" type="xml">
+			<tree string="Project Reports">
+				<field name="name" />
+				<field name="project_id" />
+				<field name="type" />
+				<field name="report_start_date" />
+				<field name="report_end_date" />
+				<field name="percent_completion" string="Project % Complete"
+					widget="progressbar" />
+			</tree>
+		</field>
+	</record>
+
+
+
+	<!-- END of Project Communication: Project Report Views -->
+
+
+	<!-- START of Project Communication: Task Report Views -->
+
+	<record model="ir.actions.act_window"
+		id="ags_project_communication_my_task_report_list_action">
+		<field name="name">Task Report</field>
+		<field name="res_model">ags.project.communication.task.report</field>
+		<field name="view_type">form</field>
+		<field name="view_mode">tree,form</field>
+    	<field name="domain">[('create_uid', '=', [uid])]</field>
+		<field name="help" type="html">
+			<p class="oe_view_nocontent_create">Create the first Task Report.
+			</p>
+		</field>
+	</record>
+
+
+	<record model="ir.actions.act_window"
+		id="ags_project_communication_task_report_list_action">
+		<field name="name">Task Report</field>
+		<field name="res_model">ags.project.communication.task.report</field>
+		<field name="view_type">form</field>
+		<field name="view_mode">tree,form</field>
+		<field name="help" type="html">
+			<p class="oe_view_nocontent_create">Create the first Task Report.
+			</p>
+		</field>
+	</record>
+
+
+	<record model="ir.ui.view" id="ags_project_communication_task_report_form_view">
+		<field name="name">ags.project.communication.task.report.form</field>
+		<field name="model">ags.project.communication.task.report</field>
+		<field name="arch" type="xml">
+			<form string="Task Report">
+				<sheet>
+					<div class="oe_title">
+						<label for="name" class="oe_edit_only" />
+						<h1>
+							<field name="name" />
+						</h1>
+					</div>
+					<group>
+						<group>
+							<field name="project_id" />
+							<field name="type" />
+						</group>
+						<group>
+							<field name="task_id" />
+							<field name="percent_completion" />
+						</group>
+						<group>
+							<field name="report_start_date" />
+						</group>
+						<group>
+							<field name="report_end_date" />
+						</group>
+					</group>
+					<group>
+						<field name="description" />
+					</group>
+				</sheet>
+			</form>
+		</field>
+	</record>
+
+
+	<record model="ir.ui.view" id="ags_project_communication_task_report_tree_view">
+		<field name="name">ags.project.communication.task.report.tree</field>
+		<field name="model">ags.project.communication.task.report</field>
+		<field name="arch" type="xml">
+			<tree string="Task Reports">
+				<field name="name" />
+				<field name="task_id" />
+				<field name="project_id" />
+				<field name="type" />
+				<field name="report_start_date" />
+				<field name="report_end_date" />
+				<field name="percent_completion" string="Task % Complete"
+					widget="progressbar" />
+			</tree>
+		</field>
+	</record>
+
+
+
+	<!-- END of Project Communication: Task Report Views -->
+
+
+	<!-- START of Project Issue Views -->
+
+	<record model="ir.ui.view" id="ags_project_quality_issue_tree_view">
+		<field name="name">ags.project.quality.issue.tree</field>
+		<field name="model">ags.project.quality.issue</field>
+		<field name="arch" type="xml">
+			<tree string="Project Issues" editable="bottom">
+				<field name="name" />
+				<field name="project_id" context="{'default_project_id': default_project_id}"
+					invisible="1" />
+				<field name="submit_id" />
+				<field name="phase_id" />
+				<field name="priority" />
+				<field name="state" />
+				<field name="submit_date" />
+				<field name="assign_id" />
+				<field name="plan_close_date" />
+				<field name="actual_close_date" />
+				<field name="description" />
+			</tree>
+		</field>
+	</record>
+
+
+	<record model="ir.actions.act_window" id="ags_project_quality_issue_list_action">
+		<field name="name">Issue</field>
+		<field name="res_model">ags.project.quality.issue</field>
+		<field name="view_type">form</field>
+		<field name="view_mode">tree,form</field>
+		<field name="domain">[('project_id', '=', [active_id])]</field>
+		<field name="context">{'default_project_id':active_id}</field>
+		<field name="help" type="html">
+			<p class="oe_view_nocontent_create">Create the first Issue.
+			</p>
+		</field>
+	</record>
+	
+	
+
+	<record model="ir.actions.act_window" id="ags_project_my_issue_list_action">
+		<field name="name">Issue</field>
+		<field name="res_model">ags.project.quality.issue</field>
+		<field name="view_type">form</field>
+		<field name="view_mode">tree,form</field>
+		<field name="domain">[('assign_id', '=', [uid])]</field>
+		<field name="help" type="html">
+			<p class="oe_view_nocontent_create">Create the first Issue.
+			</p>
+		</field>
+	</record>
+	
+	<!-- END of Project Issue Views -->
+
+
+	<!-- START of Project Views -->
+
+	<record model="ir.ui.view" id="ags_project_form_view">
+		<field name="name">ags.project.form</field>
+		<field name="model">ags.project</field>
+		<field name="arch" type="xml">
+			<form string="Project">
+				<header>
+					<button name="action_initiating" type="object" string="Initiating" />
+					<button name="action_planning" type="object" string="Planning"
+						states="initiating,doing" />
+					<button name="action_doing" type="object" string="Executing and Monitoring"
+						states="planning,closing" />
+					<button name="action_closing" type="object" string="Closing" />
+					<field name="state" widget="statusbar" />
+				</header>
+				<header>
+					<button class="oe_button oe_highlight" name="%(ags_project_time_activity_list_action)d"
+						type="action" string="Plan Activities" states="planning" />
+					<button class="oe_button oe_highlight" name="%(ags_project_cost_task_list_action)d"
+						type="action" string="Create Task" states="planning,doing" />
+					<button class="oe_button oe_highlight" name="%(ags_project_quality_issue_list_action)d"
+						type="action" string="Issue List" states="doing" />
+
+				</header>
+				<sheet>
+					<div class="oe_title">
+						<label for="name" class="oe_edit_only" />
+						<h1>
+							<field name="name" />
+						</h1>
+					</div>
+					<group>
+						<group>
+							<field name="code" />
+							<field name="type" />
+						</group>
+						<group>
+							<field name="manager_id" />
+							<field name="director_id" />
+							<field name="department_id" />
+						</group>
+						<group>
+							<field name="plan_start_date" />
+							<field name="plan_end_date" />
+						</group>
+						<group>
+							<field name="actual_start_date" />
+							<field name="actual_end_date" />
+						</group>
+						<group>
+							<field name="current_phase" />
+							<field name="percent_complete" readonly="1" widget="progressbar" />
+							<field name="report_frequency" string="Report Frequency" />
+							<field name="description" />
+						</group>
+					</group>
+					<notebook>
+						<page string="Phases and Milestones">
+							<group>
+								<field name="project_phases" string="Project Phases">
+									<form string="Project Phase">
+										<sheet>
+											<group>
+												<group>
+													<field name="name"
+														attrs="{'readonly': [('state', '=', 'completion')]}" />
+													<field name="state" />
+													<field name="project_id" />
+												</group>
+												<group>
+													<field name="plan_start_date" />
+													<field name="plan_end_date" />
+												</group>
+											</group>
+										</sheet>
+									</form>
+									<tree editable="bottom">
+										<field name="name"
+											attrs="{'readonly': [('state', '=', 'completion')]}" />
+										<field name="state" />
+										<field name="plan_start_date" />
+										<field name="plan_end_date" />
+									</tree>
+								</field>
+							</group>
+							<group>
+								<field name="project_milestones">
+									<form string="Project Milestone">
+										<sheet>
+											<group>
+												<group>
+													<field name="name" />
+													<field name="type" />
+													<field name="project_id" />
+												</group>
+												<group>
+													<field name="plan_end_date" />
+													<field name="actual_end_date" />
+													<field name="deliverables" />
+												</group>
+											</group>
+										</sheet>
+									</form>
+									<tree string="Project Milestones" editable="bottom">
+										<field name="name" />
+										<field name="type" />
+										<field name="plan_end_date" />
+										<field name="deliverables" />
+									</tree>
+								</field>
+							</group>
+						</page>
+						<page string="Budget and Cost">
+							<group>
+								<field name="estimate_cost" />
+								<field name="budget_at_completion" />
+							</group>
+							<div>
+								Tips:
+								<ul>
+									<li>Estimate Cost: This is the cost (unit: person-month)
+										estimated by experts before the project planning.
+									</li>
+									<li>Budget at Completion: This is the budget (unit:
+										person-month)
+										at completion calculated based on project plan
+										activities.
+									</li>
+								</ul>
+							</div>
+						</page>
+						<page string="Scope Statement">
+							<field name="scope_statement" widget="html" />
+						</page>
+						<page string="Earned Value Management">
+							<group>
+								<group>
+									<field name="earned_value" />
+									<field name="planned_value" />
+									<field name="actual_cost" />
+								</group>
+								<group>
+									<field name="schedule_variance" />
+									<field name="cost_variance" />
+								</group>
+							</group>
+						</page>
+					</notebook>
+				</sheet>
+			</form>
+		</field>
+	</record>
+
+
+	<record model="ir.ui.view" id="ags_project_tree_view">
+		<field name="name">ags.project.tree</field>
+		<field name="model">ags.project</field>
+		<field name="arch" type="xml">
+			<tree string="Project Tree">
+				<field name="code" />
+				<field name="name" />
+				<field name="manager_id" />
+				<field name="description" />
+			</tree>
+		</field>
+	</record>
+
+
+
+	<record model="ir.ui.view" id="ags_project_search_view">
+		<field name="name">ags.project.search</field>
+		<field name="model">ags.project</field>
+		<field name="arch" type="xml">
+			<search>
+				<field name="code" />
+				<field name="name" />
+				<field name="state" />
+				<filter string="Planning Projects" name="planning"
+					domain="[('state','=','planning')]" />
+				<field name="manager_id" />
+				<field name="description" />
+			</search>
+		</field>
+	</record>
+
+
+	<record model="ir.actions.act_window" id="ags_project_list_action">
+		<field name="name">Project</field>
+		<field name="res_model">ags.project</field>
+		<field name="view_type">form</field>
+		<field name="view_mode">tree,form</field>
+		<field name="search_view_id" ref="ags_project_search_view" />
+		<field name="help" type="html">
+			<p class="oe_view_nocontent_create">Create the first project.
+			</p>
+		</field>
+	</record>
+
+
+	<!-- END of Project Views -->
+
+
+	<!-- START of Menus -->
+
+	<!-- top level menu: no parent -->
+	<menuitem id="main_ags_project_menu" name="AgS Project" />
+	<!-- A first level in the left side menu is needed before using action= 
+		attribute -->
+	<menuitem id="ags_project_menu" name="All Project" parent="main_ags_project_menu" />
+	<menuitem id="ags_project_report_menu" name="Project Report" parent="main_ags_project_menu" />
+	<!-- the following menuitem should appear *after* its parent and *after* 
+		its action -->
+	<menuitem id="ags_project_list_menu" name="Projects" parent="ags_project_menu"
+		action="ags_project_list_action" />
+	<menuitem id="ags_project_communication_report_list_menu"
+		name="Reports" parent="ags_project_report_menu"
+		action="ags_project_communication_report_list_action" />	
+		
+		
+	<!-- top level menu: no parent -->
+	<menuitem id="main_ags_project_task_menu" name="AgS Task" />	
+	<!-- A first level in the left side menu is needed before using action= 
+		attribute -->
+	<menuitem id="ags_project_task_menu" name="My Task" parent="main_ags_project_task_menu" />
+	<menuitem id="ags_project_my_task_report_menu" name="My Report" parent="main_ags_project_task_menu" />
+	<menuitem id="ags_project_task_report_menu" name="Reports" parent="main_ags_project_task_menu" />
+	<!-- the following menuitem should appear *after* its parent and *after* 
+		its action -->
+	<menuitem id="ags_project_cost_task_list_menu" name="Tasks"
+		parent="ags_project_task_menu" action="ags_project_cost_my_task_list_action" />
+	<menuitem id="ags_project_communication_my_task_report_list_menu"
+		name="Reports" parent="ags_project_my_task_report_menu"
+		action="ags_project_communication_my_task_report_list_action" />
+	<menuitem id="ags_project_communication_task_report_list_menu"
+		name="Reports" parent="ags_project_task_report_menu"
+		action="ags_project_communication_task_report_list_action" />
+		
+		
+		
+	<!-- top level menu: no parent -->
+	<menuitem id="main_ags_project_issue_menu" name="AgS Issues" />
+	<!-- A first level in the left side menu is needed before using action= 
+		attribute -->
+	<menuitem id="ags_project_issue_menu" name="My Issue" parent="main_ags_project_issue_menu" />
+	<!-- the following menuitem should appear *after* its parent and *after* 
+		its action -->
+	<menuitem id="ags_project_my_issue_list_menu" name="Issues" parent="ags_project_issue_menu"
+		action="ags_project_my_issue_list_action" />
+		
+		
+	<!-- END of Menus -->
+			
+</odoo>
