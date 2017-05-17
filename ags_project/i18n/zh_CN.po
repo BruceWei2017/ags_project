@@ -1,0 +1,972 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* ags_project
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-05-17 03:41+0000\n"
+"PO-Revision-Date: 2017-05-17 17:27+0800\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: zh_CN\n"
+"X-Generator: Poedit 1.8.12\n"
+
+#. module: ags_project
+#: model:ir.ui.view,arch_db:ags_project.ags_project_time_activity_kanban_view
+msgid ""
+"<br/>\n"
+"\t\t\t\t\t\t\t\tPlan End Date:"
+msgstr "计划结束日期︰"
+
+#. module: ags_project
+#: model:ir.ui.view,arch_db:ags_project.ags_project_time_activity_kanban_view
+msgid ""
+"<br/>\n"
+"\t\t\t\t\t\t\t\tPlan Start date:"
+msgstr "计划开始日期︰"
+
+#. module: ags_project
+#: model:ir.actions.act_window,name:ags_project.ags_project_time_activity_list_action
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_cost_task_activity_id
+msgid "Activity"
+msgstr "活动"
+
+#. module: ags_project
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_cost_task_actual_cost
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_time_activity_actual_cost
+msgid "Activity Actual Cost"
+msgstr "活动实际成本"
+
+#. module: ags_project
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_time_activity_name
+msgid "Activity Name"
+msgstr "活动名称"
+
+#. module: ags_project
+#: model:ir.ui.view,arch_db:ags_project.ags_project_time_activity_kanban_view
+msgid "Activity Name:"
+msgstr "活动名称"
+
+#. module: ags_project
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_time_activity_activity_tasks
+#: model:ir.ui.view,arch_db:ags_project.ags_project_time_activity_form_view
+msgid "Activity Tasks"
+msgstr "活动任务"
+
+#. module: ags_project
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_quality_issue_actual_close_date
+msgid "Actual Close Date"
+msgstr "实际关闭日期"
+
+#. module: ags_project
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_actual_cost
+msgid "Actual Cost"
+msgstr "实际成本"
+
+#. module: ags_project
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_actual_end_date
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_cost_task_actual_end_date
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_time_activity_actual_end_date
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_time_milestone_actual_end_date
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_time_phase_actual_end_date
+msgid "Actual End Date"
+msgstr "实际结束日期"
+
+#. module: ags_project
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_actual_start_date
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_cost_task_actual_start_date
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_time_activity_actual_start_date
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_time_phase_actual_start_date
+msgid "Actual Start Date"
+msgstr "实际开始日期"
+
+#. module: ags_project
+#: model:ir.ui.menu,name:ags_project.main_ags_project_issue_menu
+msgid "AgS Issues"
+msgstr "问题跟踪"
+
+#. module: ags_project
+#: model:ir.ui.menu,name:ags_project.main_ags_project_menu
+msgid "AgS Project"
+msgstr "项目管理"
+
+#. module: ags_project
+#: model:ir.ui.menu,name:ags_project.main_ags_project_task_menu
+msgid "AgS Task"
+msgstr "任务管理"
+
+#. module: ags_project
+#: model:ir.ui.menu,name:ags_project.ags_project_menu
+msgid "All Project"
+msgstr "所有项目"
+
+#. module: ags_project
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_cost_task_assign_id
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_quality_issue_assign_id
+msgid "Assigned to"
+msgstr "分派给"
+
+#. module: ags_project
+#: model:ir.ui.view,arch_db:ags_project.ags_project_form_view
+msgid "Budget and Cost"
+msgstr "预算与成本"
+
+#. module: ags_project
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_budget_at_completion
+msgid "Budget at Completion"
+msgstr "完工预算（BAC）"
+
+#. module: ags_project
+#: model:ir.ui.view,arch_db:ags_project.ags_project_form_view
+msgid ""
+"Budget at Completion: This is the budget (unit:\n"
+"\t\t\t\t\t\t\t\t\t\tperson-month)\n"
+"\t\t\t\t\t\t\t\t\t\tat completion calculated based on project plan\n"
+"\t\t\t\t\t\t\t\t\t\tactivities."
+msgstr "完工预算（BAC）：根据项目活动的成本汇总获得的项目完工预算（单位：人月）。"
+
+#. module: ags_project
+#: selection:ags.project,report_frequency:0
+#: selection:ags.project.cost.task,report_frequency:0
+msgid "Casually"
+msgstr "随机"
+
+#. module: ags_project
+#: selection:ags.project.quality.issue,state:0
+msgid "Closed"
+msgstr "已关闭"
+
+#. module: ags_project
+#: selection:ags.project,state:0
+#: model:ir.ui.view,arch_db:ags_project.ags_project_form_view
+msgid "Closing"
+msgstr "收尾"
+
+#. module: ags_project
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_time_activity_color
+msgid "Color"
+msgstr "颜色"
+
+#. module: ags_project
+#: selection:ags.project.cost.task,state:0
+#: selection:ags.project.time.phase,state:0
+msgid "Completion"
+msgstr "已完成"
+
+#. module: ags_project
+#: selection:ags.project.time.milestone,type:0
+msgid "Contract Payment Point"
+msgstr "合同付款点"
+
+#. module: ags_project
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_cost_variance
+msgid "Cost Variance"
+msgstr "成本偏差（CV）"
+
+#. module: ags_project
+#: model:ir.ui.view,arch_db:ags_project.ags_project_form_view
+msgid "Create Task"
+msgstr "创建任务"
+
+#. module: ags_project
+#: model:ir.actions.act_window,help:ags_project.ags_project_time_activity_list_action
+msgid "Create the first Activity."
+msgstr "创建第一个活动。"
+
+#. module: ags_project
+#: model:ir.actions.act_window,help:ags_project.ags_project_my_issue_list_action
+#: model:ir.actions.act_window,help:ags_project.ags_project_quality_issue_list_action
+msgid "Create the first Issue."
+msgstr "创建第一个问题。"
+
+#. module: ags_project
+#: model:ir.actions.act_window,help:ags_project.ags_project_communication_report_list_action
+msgid "Create the first Report."
+msgstr "创建第一个汇报。"
+
+#. module: ags_project
+#: model:ir.actions.act_window,help:ags_project.ags_project_communication_my_task_report_list_action
+#: model:ir.actions.act_window,help:ags_project.ags_project_communication_task_report_list_action
+msgid "Create the first Task Report."
+msgstr "创建第一个任务报告。"
+
+#. module: ags_project
+#: model:ir.actions.act_window,help:ags_project.ags_project_cost_my_task_list_action
+#: model:ir.actions.act_window,help:ags_project.ags_project_cost_task_list_action
+msgid "Create the first Task."
+msgstr "创建第一个任务。"
+
+#. module: ags_project
+#: model:ir.actions.act_window,help:ags_project.ags_project_list_action
+msgid "Create the first project."
+msgstr "创建第一个项目。"
+
+#. module: ags_project
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_communication_report_create_uid
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_communication_task_report_create_uid
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_cost_task_create_uid
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_create_uid
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_humanresource_create_uid
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_integration_create_uid
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_procurement_create_uid
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_quality_issue_create_uid
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_risk_create_uid
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_scope_create_uid
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_stakeholder_create_uid
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_time_activity_create_uid
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_time_milestone_create_uid
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_time_phase_create_uid
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_type_create_uid
+#: model:ir.ui.view,arch_db:ags_project.ags_project_communication_report_form_view
+msgid "Created by"
+msgstr "创建人"
+
+#. module: ags_project
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_communication_report_create_date
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_communication_task_report_create_date
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_cost_task_create_date
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_create_date
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_humanresource_create_date
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_integration_create_date
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_procurement_create_date
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_quality_issue_create_date
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_risk_create_date
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_scope_create_date
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_stakeholder_create_date
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_time_activity_create_date
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_time_milestone_create_date
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_time_phase_create_date
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_type_create_date
+msgid "Created on"
+msgstr "创建时间"
+
+#. module: ags_project
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_current_phase
+msgid "Current Phase"
+msgstr "当前阶段"
+
+#. module: ags_project
+#: selection:ags.project,report_frequency:0
+#: selection:ags.project.cost.task,report_frequency:0
+msgid "Daily"
+msgstr "每日"
+
+#. module: ags_project
+#: model:ir.ui.view,arch_db:ags_project.ags_project_time_activity_kanban_view
+msgid "Delete"
+msgstr "删除"
+
+#. module: ags_project
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_time_milestone_deliverables
+msgid "Deliverables"
+msgstr "交付成果物"
+
+#. module: ags_project
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_department_id
+msgid "Department"
+msgstr "部门"
+
+#. module: ags_project
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_communication_report_description
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_communication_task_report_description
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_cost_task_description
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_description
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_quality_issue_description
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_time_activity_description
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_type_description
+msgid "Description"
+msgstr "说明"
+
+#. module: ags_project
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_communication_report_display_name
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_communication_task_report_display_name
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_cost_task_display_name
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_display_name
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_humanresource_display_name
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_integration_display_name
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_procurement_display_name
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_quality_issue_display_name
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_risk_display_name
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_scope_display_name
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_stakeholder_display_name
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_time_activity_display_name
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_time_milestone_display_name
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_time_phase_display_name
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_type_display_name
+msgid "Display Name"
+msgstr "显示名称"
+
+#. module: ags_project
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_earned_value
+msgid "Earned Value"
+msgstr "挣值"
+
+#. module: ags_project
+#: model:ir.ui.view,arch_db:ags_project.ags_project_form_view
+msgid "Earned Value Management"
+msgstr "挣值管理"
+
+#. module: ags_project
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_estimate_cost
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_time_activity_estimate_cost
+msgid "Estimate Cost"
+msgstr "预估成本"
+
+#. module: ags_project
+#: model:ir.ui.view,arch_db:ags_project.ags_project_form_view
+msgid ""
+"Estimate Cost: This is the cost (unit: person-month)\n"
+"\t\t\t\t\t\t\t\t\t\testimated by experts before the project planning."
+msgstr "完工估算：根据专家与项目经理立项前项目的成本完成估算（单位：人月）。"
+
+#. module: ags_project
+#: selection:ags.project,state:0
+msgid "Executing & Monitoring"
+msgstr "执行与监控"
+
+#. module: ags_project
+#: model:ir.ui.view,arch_db:ags_project.ags_project_form_view
+msgid "Executing and Monitoring"
+msgstr "执行与监控"
+
+#. module: ags_project
+#: selection:ags.project.cost.task,priority:0
+#: selection:ags.project.quality.issue,priority:0
+msgid "High"
+msgstr "高"
+
+#. module: ags_project
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_quality_issue_priority_reason
+msgid "High Priority Reason"
+msgstr "高优先原因"
+
+#. module: ags_project
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_humanresource_name
+msgid "HumanResource Name"
+msgstr "人力资源名称"
+
+#. module: ags_project
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_communication_report_id
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_communication_task_report_id
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_cost_task_id
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_humanresource_id
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_id
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_integration_id
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_procurement_id
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_quality_issue_id
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_risk_id
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_scope_id
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_stakeholder_id
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_time_activity_id
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_time_milestone_id
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_time_phase_id
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_type_id
+msgid "ID"
+msgstr "唯一标识"
+
+#. module: ags_project
+#: selection:ags.project,state:0
+#: model:ir.ui.view,arch_db:ags_project.ags_project_form_view
+msgid "Initiating"
+msgstr "初始化"
+
+#. module: ags_project
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_integration_name
+msgid "Integration Name"
+msgstr "集成名称"
+
+#. module: ags_project
+#: selection:ags.project.time.milestone,type:0
+msgid "Internal Management Point"
+msgstr "内部管理点"
+
+#. module: ags_project
+#: model:ir.actions.act_window,name:ags_project.ags_project_my_issue_list_action
+#: model:ir.actions.act_window,name:ags_project.ags_project_quality_issue_list_action
+msgid "Issue"
+msgstr "问题"
+
+#. module: ags_project
+#: model:ir.ui.view,arch_db:ags_project.ags_project_form_view
+msgid "Issue List"
+msgstr "问题清单"
+
+#. module: ags_project
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_quality_issue_name
+msgid "Issue Summary"
+msgstr "问题秒速"
+
+#. module: ags_project
+#: model:ir.ui.menu,name:ags_project.ags_project_my_issue_list_menu
+msgid "Issues"
+msgstr "问题清单"
+
+#. module: ags_project
+#: model:ir.model.fields,field_description:ags_project.field_ags_project___last_update
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_communication_report___last_update
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_communication_task_report___last_update
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_cost_task___last_update
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_humanresource___last_update
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_integration___last_update
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_procurement___last_update
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_quality_issue___last_update
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_risk___last_update
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_scope___last_update
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_stakeholder___last_update
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_time_activity___last_update
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_time_milestone___last_update
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_time_phase___last_update
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_type___last_update
+msgid "Last Modified on"
+msgstr "最后修改日"
+
+#. module: ags_project
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_communication_report_write_uid
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_communication_task_report_write_uid
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_cost_task_write_uid
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_humanresource_write_uid
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_integration_write_uid
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_procurement_write_uid
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_quality_issue_write_uid
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_risk_write_uid
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_scope_write_uid
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_stakeholder_write_uid
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_time_activity_write_uid
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_time_milestone_write_uid
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_time_phase_write_uid
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_type_write_uid
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_write_uid
+msgid "Last Updated by"
+msgstr "最后更新人"
+
+#. module: ags_project
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_communication_report_write_date
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_communication_task_report_write_date
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_cost_task_write_date
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_humanresource_write_date
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_integration_write_date
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_procurement_write_date
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_quality_issue_write_date
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_risk_write_date
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_scope_write_date
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_stakeholder_write_date
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_time_activity_write_date
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_time_milestone_write_date
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_time_phase_write_date
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_type_write_date
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_write_date
+msgid "Last Updated on"
+msgstr "最后更新时间"
+
+#. module: ags_project
+#: selection:ags.project.cost.task,priority:0
+#: selection:ags.project.quality.issue,priority:0
+msgid "Low"
+msgstr "低"
+
+#. module: ags_project
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_time_milestone_name
+msgid "Milestone Name"
+msgstr "里程碑名称"
+
+#. module: ags_project
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_time_milestone_type
+msgid "Milestone Type"
+msgstr "里程碑类型"
+
+#. module: ags_project
+#: selection:ags.project,report_frequency:0
+#: selection:ags.project.cost.task,report_frequency:0
+msgid "Monthly"
+msgstr "每月"
+
+#. module: ags_project
+#: model:ir.ui.menu,name:ags_project.ags_project_issue_menu
+msgid "My Issue"
+msgstr "我的问题"
+
+#. module: ags_project
+#: model:ir.ui.menu,name:ags_project.ags_project_my_task_report_menu
+msgid "My Report"
+msgstr "我的报告"
+
+#. module: ags_project
+#: model:ir.ui.menu,name:ags_project.ags_project_task_menu
+msgid "My Task"
+msgstr "我的任务"
+
+#. module: ags_project
+#: selection:ags.project.cost.task,state:0
+#: selection:ags.project.quality.issue,state:0
+#: selection:ags.project.time.phase,state:0
+msgid "New"
+msgstr "新建"
+
+#. module: ags_project
+#: selection:ags.project.cost.task,priority:0
+#: selection:ags.project.quality.issue,priority:0
+msgid "Normal"
+msgstr "一般"
+
+#. module: ags_project
+#: selection:ags.project.cost.task,state:0
+#: selection:ags.project.quality.issue,state:0
+#: selection:ags.project.time.phase,state:0
+msgid "Ongoing"
+msgstr "进行中"
+
+#. module: ags_project
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_quality_issue_phase_id
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_time_activity_phase_id
+msgid "Phase"
+msgstr "阶段"
+
+#. module: ags_project
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_time_phase_phase_activities
+msgid "Phase Activities"
+msgstr "阶段活动"
+
+#. module: ags_project
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_time_phase_name
+msgid "Phase Name"
+msgstr "阶段名称"
+
+#. module: ags_project
+#: model:ir.ui.view,arch_db:ags_project.ags_project_form_view
+msgid "Phases and Milestones"
+msgstr "阶段与里程碑"
+
+#. module: ags_project
+#: model:ir.ui.view,arch_db:ags_project.ags_project_form_view
+msgid "Plan Activities"
+msgstr "活动计划"
+
+#. module: ags_project
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_quality_issue_plan_close_date
+msgid "Plan Close Date"
+msgstr "计划关闭时间"
+
+#. module: ags_project
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_cost_task_plan_end_date
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_plan_end_date
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_time_activity_plan_end_date
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_time_milestone_plan_end_date
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_time_phase_plan_end_date
+msgid "Plan End Date"
+msgstr "计划结束日期︰"
+
+#. module: ags_project
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_cost_task_plan_start_date
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_plan_start_date
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_time_activity_plan_start_date
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_time_phase_plan_start_date
+msgid "Plan Start Date"
+msgstr "计划开始日期︰"
+
+#. module: ags_project
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_planned_value
+msgid "Planned Value"
+msgstr "计划价值（PV）"
+
+#. module: ags_project
+#: selection:ags.project,state:0
+#: model:ir.ui.view,arch_db:ags_project.ags_project_form_view
+msgid "Planning"
+msgstr "计划安排"
+
+#. module: ags_project
+#: model:ir.ui.view,arch_db:ags_project.ags_project_search_view
+msgid "Planning Projects"
+msgstr "安排项目"
+
+#. module: ags_project
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_cost_task_priority
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_quality_issue_priority
+msgid "Priority"
+msgstr "优先级"
+
+#. module: ags_project
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_procurement_name
+msgid "Procurement Name"
+msgstr "采购名称"
+
+#. module: ags_project
+#: model:ir.actions.act_window,name:ags_project.ags_project_list_action
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_communication_report_project_id
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_communication_task_report_project_id
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_cost_task_project_id
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_humanresource_project_id
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_integration_project_id
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_procurement_project_id
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_quality_issue_project_id
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_risk_project_id
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_scope_project_id
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_stakeholder_project_id
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_time_activity_project_id
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_time_milestone_project_id
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_time_phase_project_id
+#: model:ir.ui.view,arch_db:ags_project.ags_project_form_view
+msgid "Project"
+msgstr "项目"
+
+#. module: ags_project
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_communication_report_percent_completion
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_percent_complete
+#: model:ir.ui.view,arch_db:ags_project.ags_project_communication_report_tree_view
+msgid "Project % Complete"
+msgstr "项目完成百分比（%）"
+
+#. module: ags_project
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_project_activities
+#: model:ir.ui.view,arch_db:ags_project.ags_project_time_activity_tree_view
+msgid "Project Activities"
+msgstr "项目活动"
+
+#. module: ags_project
+#: model:ir.ui.view,arch_db:ags_project.ags_project_time_activity_form_view
+msgid "Project Activity"
+msgstr "项目活动"
+
+#. module: ags_project
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_code
+msgid "Project Code"
+msgstr "项目编码"
+
+#. module: ags_project
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_director_id
+msgid "Project Director"
+msgstr "项目主管"
+
+#. module: ags_project
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_project_issues
+#: model:ir.ui.view,arch_db:ags_project.ags_project_quality_issue_tree_view
+msgid "Project Issues"
+msgstr "问题清单"
+
+#. module: ags_project
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_manager_id
+msgid "Project Manager"
+msgstr "项目经理"
+
+#. module: ags_project
+#: model:ir.ui.view,arch_db:ags_project.ags_project_form_view
+msgid "Project Milestone"
+msgstr "项目里程碑"
+
+#. module: ags_project
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_project_milestones
+#: model:ir.ui.view,arch_db:ags_project.ags_project_form_view
+msgid "Project Milestones"
+msgstr "项目里程碑"
+
+#. module: ags_project
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_name
+msgid "Project Name"
+msgstr "项目名称"
+
+#. module: ags_project
+#: model:ir.ui.view,arch_db:ags_project.ags_project_form_view
+#: model:ir.ui.view,arch_db:ags_project.ags_project_time_phase_form_view
+msgid "Project Phase"
+msgstr "项目阶段"
+
+#. module: ags_project
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_project_phases
+#: model:ir.ui.view,arch_db:ags_project.ags_project_form_view
+msgid "Project Phases"
+msgstr "项目阶段"
+
+#. module: ags_project
+#: model:ir.actions.act_window,name:ags_project.ags_project_communication_report_list_action
+#: model:ir.ui.menu,name:ags_project.ags_project_report_menu
+#: model:ir.ui.view,arch_db:ags_project.ags_project_communication_report_form_view
+msgid "Project Report"
+msgstr "项目报告"
+
+#. module: ags_project
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_project_reports
+#: model:ir.ui.view,arch_db:ags_project.ags_project_communication_report_tree_view
+msgid "Project Reports"
+msgstr "项目报告"
+
+#. module: ags_project
+#: model:ir.ui.view,arch_db:ags_project.ags_project_cost_task_form_view
+msgid "Project Task"
+msgstr "项目任务"
+
+#. module: ags_project
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_project_tasks
+#: model:ir.ui.view,arch_db:ags_project.ags_project_cost_task_tree_view
+msgid "Project Tasks"
+msgstr "任务列表"
+
+#. module: ags_project
+#: model:ir.ui.view,arch_db:ags_project.ags_project_tree_view
+msgid "Project Tree"
+msgstr "项目树"
+
+#. module: ags_project
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_type
+msgid "Project Type"
+msgstr "项目类型"
+
+#. module: ags_project
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_type_code
+msgid "Project Type Code"
+msgstr "类型编码"
+
+#. module: ags_project
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_type_name
+msgid "Project Type Name"
+msgstr "项目类型名称"
+
+#. module: ags_project
+#: model:ir.ui.menu,name:ags_project.ags_project_list_menu
+msgid "Projects"
+msgstr "项目"
+
+#. module: ags_project
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_communication_report_report_end_date
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_communication_task_report_report_end_date
+msgid "Report End Date"
+msgstr "报告截止日期"
+
+#. module: ags_project
+#: model:ir.ui.view,arch_db:ags_project.ags_project_cost_task_form_view
+#: model:ir.ui.view,arch_db:ags_project.ags_project_form_view
+msgid "Report Frequency"
+msgstr "汇报频率"
+
+#. module: ags_project
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_communication_report_name
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_communication_task_report_name
+msgid "Report Name"
+msgstr "报告名称"
+
+#. module: ags_project
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_communication_report_report_start_date
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_communication_task_report_report_start_date
+msgid "Report Start Date"
+msgstr "报告开始时间"
+
+#. module: ags_project
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_communication_report_type
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_communication_task_report_type
+msgid "Report Type"
+msgstr "报告类型"
+
+#. module: ags_project
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_cost_task_report_frequency
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_report_frequency
+msgid "Report frequency"
+msgstr "报告频率"
+
+#. module: ags_project
+#: model:ir.ui.menu,name:ags_project.ags_project_communication_my_task_report_list_menu
+#: model:ir.ui.menu,name:ags_project.ags_project_communication_report_list_menu
+#: model:ir.ui.menu,name:ags_project.ags_project_communication_task_report_list_menu
+#: model:ir.ui.menu,name:ags_project.ags_project_task_report_menu
+msgid "Reports"
+msgstr "报告"
+
+#. module: ags_project
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_risk_name
+msgid "Risk Name"
+msgstr "风险名称"
+
+#. module: ags_project
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_schedule_variance
+msgid "Schedule Variance"
+msgstr "计划偏差（SV）"
+
+#. module: ags_project
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_scope_name
+msgid "Scope Name"
+msgstr "范围名称"
+
+#. module: ags_project
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_cost_task_scope_id
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_scope_statement
+#: model:ir.ui.view,arch_db:ags_project.ags_project_form_view
+msgid "Scope Statement"
+msgstr "范围描述"
+
+#. module: ags_project
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_stakeholder_name
+msgid "StakeHolder Name"
+msgstr "干系人名称"
+
+#. module: ags_project
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_cost_task_state
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_quality_issue_state
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_state
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_time_phase_state
+msgid "State"
+msgstr "状态"
+
+#. module: ags_project
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_quality_issue_submit_id
+msgid "Submit By"
+msgstr "提交人"
+
+#. module: ags_project
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_quality_issue_submit_date
+msgid "Submit Date"
+msgstr "提交日期"
+
+#. module: ags_project
+#: selection:ags.project.cost.task,state:0
+#: selection:ags.project.quality.issue,state:0
+#: selection:ags.project.time.phase,state:0
+msgid "Suspend"
+msgstr "暂停"
+
+#. module: ags_project
+#: model:ir.actions.act_window,name:ags_project.ags_project_cost_my_task_list_action
+#: model:ir.actions.act_window,name:ags_project.ags_project_cost_task_list_action
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_communication_task_report_task_id
+msgid "Task"
+msgstr "任务"
+
+#. module: ags_project
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_communication_task_report_percent_completion
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_cost_task_percent_complete
+#: model:ir.ui.view,arch_db:ags_project.ags_project_communication_task_report_tree_view
+#: model:ir.ui.view,arch_db:ags_project.ags_project_cost_task_tree_view
+msgid "Task % Complete"
+msgstr "任务完成百分比（%）"
+
+#. module: ags_project
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_cost_task_deliverables
+msgid "Task Deliverables"
+msgstr "任务成果物"
+
+#. module: ags_project
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_cost_task_name
+msgid "Task Name"
+msgstr "任务名称"
+
+#. module: ags_project
+#: model:ir.actions.act_window,name:ags_project.ags_project_communication_my_task_report_list_action
+#: model:ir.actions.act_window,name:ags_project.ags_project_communication_task_report_list_action
+#: model:ir.ui.view,arch_db:ags_project.ags_project_communication_task_report_form_view
+msgid "Task Report"
+msgstr "任务报告"
+
+#. module: ags_project
+#: model:ir.model.fields,field_description:ags_project.field_ags_project_cost_task_task_reports
+#: model:ir.ui.view,arch_db:ags_project.ags_project_communication_task_report_tree_view
+msgid "Task Reports"
+msgstr "任务报告"
+
+#. module: ags_project
+#: model:ir.ui.menu,name:ags_project.ags_project_cost_task_list_menu
+msgid "Tasks"
+msgstr "任务列表"
+
+#. module: ags_project
+#: model:ir.model.fields,help:ags_project.field_ags_project_time_activity_actual_cost
+msgid "The activity actual cost calculated by the Task cost summary."
+msgstr "The activity actual cost calculated by the Task cost summary."
+
+#. module: ags_project
+#: model:ir.model.fields,help:ags_project.field_ags_project_time_activity_estimate_cost
+msgid "The activity cost estimated by project manager and experts."
+msgstr "The activity cost estimated by project manager and experts."
+
+#. module: ags_project
+#: model:ir.model.fields,help:ags_project.field_ags_project_actual_cost
+msgid "The project actual cost calculated by the Task cost summary."
+msgstr "The project actual cost calculated by the Task cost summary."
+
+#. module: ags_project
+#: model:ir.ui.view,arch_db:ags_project.ags_project_form_view
+msgid "Tips:"
+msgstr "提示："
+
+#. module: ags_project
+#: selection:ags.project,report_frequency:0
+#: selection:ags.project.cost.task,report_frequency:0
+msgid "Weekly"
+msgstr "每周"
+
+#. module: ags_project
+#: model:ir.model,name:ags_project.model_ags_project
+msgid "ags.project"
+msgstr "ags.project"
+
+#. module: ags_project
+#: model:ir.model,name:ags_project.model_ags_project_communication_report
+msgid "ags.project.communication.report"
+msgstr "ags.project.communication.report"
+
+#. module: ags_project
+#: model:ir.model,name:ags_project.model_ags_project_communication_task_report
+msgid "ags.project.communication.task.report"
+msgstr "ags.project.communication.task.report"
+
+#. module: ags_project
+#: model:ir.model,name:ags_project.model_ags_project_cost_task
+msgid "ags.project.cost.task"
+msgstr "ags.project.cost.task"
+
+#. module: ags_project
+#: model:ir.model,name:ags_project.model_ags_project_humanresource
+msgid "ags.project.humanresource"
+msgstr "ags.project.humanresource"
+
+#. module: ags_project
+#: model:ir.model,name:ags_project.model_ags_project_integration
+msgid "ags.project.integration"
+msgstr "ags.project.integration"
+
+#. module: ags_project
+#: model:ir.model,name:ags_project.model_ags_project_procurement
+msgid "ags.project.procurement"
+msgstr "ags.project.procurement"
+
+#. module: ags_project
+#: model:ir.model,name:ags_project.model_ags_project_quality_issue
+msgid "ags.project.quality.issue"
+msgstr "ags.project.quality.issue"
+
+#. module: ags_project
+#: model:ir.model,name:ags_project.model_ags_project_risk
+msgid "ags.project.risk"
+msgstr "ags.project.risk"
+
+#. module: ags_project
+#: model:ir.model,name:ags_project.model_ags_project_scope
+msgid "ags.project.scope"
+msgstr "ags.project.scope"
+
+#. module: ags_project
+#: model:ir.model,name:ags_project.model_ags_project_stakeholder
+msgid "ags.project.stakeholder"
+msgstr "ags.project.stakeholder"
+
+#. module: ags_project
+#: model:ir.model,name:ags_project.model_ags_project_time_activity
+msgid "ags.project.time.activity"
+msgstr "ags.project.time.activity"
+
+#. module: ags_project
+#: model:ir.model,name:ags_project.model_ags_project_time_milestone
+msgid "ags.project.time.milestone"
+msgstr "ags.project.time.milestone"
+
+#. module: ags_project
+#: model:ir.model,name:ags_project.model_ags_project_time_phase
+msgid "ags.project.time.phase"
+msgstr "ags.project.time.phase"
+
+#. module: ags_project
+#: model:ir.model,name:ags_project.model_ags_project_type
+msgid "ags.project.type"
+msgstr "ags.project.type"
